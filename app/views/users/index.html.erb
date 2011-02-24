@@ -1,0 +1,13 @@
+<div id="right">
+  <h2>List of users [Total: <%= @users.size %>]</h2>
+  <% if current_user.login == "balajidl"  %>
+    <ol id="leftmenu">
+      <% @users.each do |u| %>
+       <li><%= u.login + " - " + u.name + " - " + u.email %></li>
+      <% end %>
+    </ol>
+  <% else %>
+    <h1>No permission for you.</h1>
+  <% end %>
+  <div style="clear: both"></div>
+</div>

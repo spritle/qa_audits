@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+    <title>Migration Links Tracker</title>
+    <%= stylesheet_link_tag 'style' %>
+    <%= javascript_include_tag 'jquery' %>
+
+  </head>
+  <body>
+    <div id="content">
+      <div id="logo">
+        <a><img src="/images/spritle_logo1.png" alt="Spritle" title="Spritle" border="0" /></a>
+      </div>
+      <ul id="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/categories">Dashboard</a></li>
+        <li><a href="/units">Reports</a></li>
+      </ul>
+      <div id="intro">
+        <h1>QA Reports</h1>
+        <p>Check the Quality of your build</p>
+        <% if logged_in? %>
+          <div id="login2">
+            <p>
+              Logged in as <%= current_user.name.titleize %>
+              <%= link_to "Log out", logout_path, { :title => "Log out" }    %>
+            </p>
+          </div>
+        <% else %>
+          <div id="login2">
+            <p><a href="/session/new">Sign in <%= current_user.email if current_user %></a>  <a href="/users/new">Sign up</a></p>
+          </div>
+        <% end %>
+      </div>
+
+      <%= yield %>
+
+      <div id="footer">
+        <div id="col1">
+          <p><a href="/">Terms and Conditions</a><br />
+            &copy; Copyright 2011 <a href="http://www.spritle.com" target="new">Spritle Software</a></p>
+        </div>
+        <div id="col3">
+          <p>Design: Luka Cvrk, <a title="Awsome Web Templates" href="http://www.solucija.com/">Solucija</a><br />
+				Valid <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> and <a href="http://validator.w3.org/check?uri=referer">XHTML</a></p>
+        </div>
+      </div>	
+    </div>
+  </body>
+</html>
