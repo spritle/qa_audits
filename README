@@ -3,5 +3,5 @@ Initial idea:
 Provide a platform for QA people to test certain number of cases for a given project build and then generate a report out of it.
 
 QA be able to CRUD test cases.
-Link to Fogbugz or JIRA or Pivotal tracker
-Generate PDF of the qa audit and send to people
+Link to Fogbugz or JIRA or Pivotal tracker or such Tracking tools
+Generate PDF of the qa audit and send to project members
