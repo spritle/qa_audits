@@ -4,4 +4,4 @@ Provide a platform for QA people to test certain number of cases for a given pro
 
 QA be able to CRUD test cases.
 Link to Fogbugz or JIRA or Pivotal tracker or such Tracking tools
-Generate PDF of the qa audit and send to project members
+Generate PDF of the qa audit and send to project members.
